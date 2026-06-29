@@ -1,19 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap');
 
 :root {
+  /* Brand Colors */
   --primary: #8b5cf6;
   --secondary: #ec4899;
-  --dark-bg: #0f172a;
-  --dark-surface: #1e293b;
+
+  /* Default Dark Theme Variables */
+  --bg-color: #0f172a;
+  --surface-color: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-strong: #ffffff;
+  --border-divider: rgba(255, 255, 255, 0.1);
   --glass-bg: rgba(30, 41, 59, 0.7);
   --glass-border: rgba(255, 255, 255, 0.1);
 }
 
-body {
+.light-theme {
+  /* Light Theme Overrides */
+  --bg-color: #f8fafc; /* slate-50 */
+  --surface-color: #ffffff; /* white */
+  --text-main: #1e293b; /* slate-800 */
+  --text-muted: #64748b; /* slate-500 */
+  --text-strong: #0f172a; /* slate-900 */
+  --border-divider: rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.1);
+}
+
+html, body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--dark-bg);
-  color: #f8fafc;
+  background-color: var(--bg-color);
+  color: var(--text-main);
   overflow-x: hidden;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6, .font-display {
@@ -93,4 +114,68 @@ h1, h2, h3, h4, h5, h6, .font-display {
 }
 .nav-link:hover::after {
   width: 100%;
+}
+
+/* Mobile Menu - solid background so content doesn't bleed through */
+#mobile-menu {
+  background: var(--dark-bg) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-top: 1px solid var(--glass-border) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#mobile-menu a {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+#mobile-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ─── Mobile Responsive Fixes (360px) ─── */
+@media (max-width: 400px) {
+  /* Reduce section heading sizes */
+  h1 { font-size: 2rem !important; line-height: 1.2 !important; }
+  h2 { font-size: 1.75rem !important; }
+  h3 { font-size: 1.25rem !important; }
+
+  /* Reduce paragraph text */
+  .text-xl { font-size: 1rem !important; line-height: 1.6 !important; }
+  .text-lg { font-size: 0.95rem !important; }
+
+  /* Reduce section padding */
+  .py-24 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .pt-32 { padding-top: 6rem !important; }
+  .mb-16 { margin-bottom: 2rem !important; }
+
+  /* Fix decorative blobs overflowing on small screens */
+  .w-96 { width: 12rem !important; height: 12rem !important; }
+
+  /* Reduce large stat numbers */
+  .text-6xl { font-size: 2.5rem !important; }
+  .text-5xl { font-size: 2rem !important; }
+
+  /* Tighter card padding */
+  .p-8 { padding: 1.25rem !important; }
+  .gap-12 { gap: 2rem !important; }
+  .gap-8 { gap: 1.5rem !important; }
+
+  /* Fix CTA section heading line break */
+  .text-5xl br, h2 br { display: none; }
 }

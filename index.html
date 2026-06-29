@@ -6,15 +6,20 @@
     <title>AR Filter Creator | Home</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+        <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
                         primary: '#8b5cf6',
                         secondary: '#ec4899',
-                        dark: '#0f172a',
-                        surface: '#1e293b'
+                        bg: 'var(--bg-color)',
+                        surface: 'var(--surface-color)',
+                        main: 'var(--text-main)',
+                        muted: 'var(--text-muted)',
+                        strong: 'var(--text-strong)',
+                        divider: 'var(--border-divider)'
                     }
                 }
             }
@@ -25,10 +30,11 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-dark text-slate-200 antialiased">
+<body class="bg-bg text-main antialiased">
 
     <!-- Navigation Bar -->
-    <nav class="fixed w-full z-50 glass border-b border-white/10">
+        <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass border-b border-divider">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
@@ -36,18 +42,25 @@
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html" class="nav-link text-white font-medium">Home</a>
-                    <a href="home2.html" class="nav-link text-slate-300 hover:text-white font-medium">Brands</a>
-                    <a href="about.html" class="nav-link text-slate-300 hover:text-white font-medium">About</a>
-                    <a href="service.html" class="nav-link text-slate-300 hover:text-white font-medium">Services</a>
-                    <a href="portfolio.html" class="nav-link text-slate-300 hover:text-white font-medium">Portfolio</a>
-                    <a href="pricing.html" class="nav-link text-slate-300 hover:text-white font-medium">Pricing</a>
-                    <a href="contact.html" class="nav-link text-slate-300 hover:text-white font-medium">Contact</a>
-                    <a href="signup.html" class="bg-gradient-to-r from-primary to-secondary px-6 py-2 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:-translate-y-1">Start Project</a>
-                </div>
+                    <a href="index.html" class="nav-link text-strong font-medium">Home</a>
+                    <a href="home2.html" class="nav-link text-muted hover:text-strong font-medium">Brands</a>
+                    <a href="about.html" class="nav-link text-muted hover:text-strong font-medium">About</a>
+                    <a href="service.html" class="nav-link text-muted hover:text-strong font-medium">Services</a>
+                    <a href="portfolio.html" class="nav-link text-muted hover:text-strong font-medium">Portfolio</a>
+                    <a href="pricing.html" class="nav-link text-muted hover:text-strong font-medium">Pricing</a>
+                    <a href="contact.html" class="nav-link text-muted hover:text-strong font-medium">Contact</a>
+                    <a href="signup.html" class="bg-gradient-to-r from-primary to-secondary px-6 py-2 rounded-full text-strong font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:-translate-y-1">Start Project</a>
+                                    <button id="theme-toggle-desktop" class="text-muted hover:text-main focus:outline-none p-2 transition-colors">
+                        <svg id="theme-icon-moon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                        <svg id="theme-icon-sun" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </button>
+                    <button id="rtl-toggle-desktop" class="text-muted hover:text-main focus:outline-none p-2 transition-colors" title="Toggle RTL">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"></path></svg>
+                    </button>
+</div>
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none p-2">
+                    <button id="mobile-menu-button" class="text-muted hover:text-strong focus:outline-none p-2">
                         <svg class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -59,17 +72,24 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden glass border-t border-white/10 absolute w-full">
+        <div id="mobile-menu" class="md:hidden hidden glass border-t border-divider absolute w-full">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
-                <a href="index.html" class="text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="home2.html" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Brands</a>
-                <a href="about.html" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
-                <a href="service.html" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
-                <a href="portfolio.html" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
-                <a href="pricing.html" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Pricing</a>
-                <a href="contact.html" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="index.html" class="text-strong block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="home2.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Brands</a>
+                <a href="about.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="service.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="portfolio.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="pricing.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Pricing</a>
+                <a href="contact.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Contact</a>
                 <a href="signup.html" class="text-primary block px-3 py-2 rounded-md text-base font-bold">Start Project</a>
-            </div>
+                                <button id="theme-toggle-desktop" class="text-muted hover:text-main focus:outline-none p-2 transition-colors">
+                        <svg id="theme-icon-moon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                        <svg id="theme-icon-sun" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </button>
+                    <button id="rtl-toggle-desktop" class="text-muted hover:text-main focus:outline-none p-2 transition-colors" title="Toggle RTL">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"></path></svg>
+                    </button>
+</div>
         </div>
     </nav>
 
@@ -81,16 +101,16 @@
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right">
-                <h1 class="text-5xl md:text-7xl font-extrabold font-display leading-tight mb-6">
+                <h1 class="text-4xl md:text-7xl font-extrabold font-display leading-tight mb-6">
                     Redefine Reality with <br>
                     <span class="text-gradient">Custom AR Filters</span>
                 </h1>
-                <p class="text-lg md:text-xl text-slate-400 mb-8 max-w-lg">
+                <p class="text-lg md:text-xl text-muted mb-8 max-w-lg">
                     Elevate your brand and captivate your audience on Instagram, Snapchat, and TikTok with high-end augmented reality experiences.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="portfolio.html" class="px-8 py-4 bg-white text-dark font-bold rounded-full hover:bg-slate-200 transition-colors text-center">View Portfolio</a>
-                    <a href="signup.html" class="px-8 py-4 glass text-white font-bold rounded-full hover:bg-white/10 transition-colors border border-white/20 text-center flex items-center justify-center gap-2">
+                    <a href="portfolio.html" class="px-8 py-4 bg-strong text-bg text-dark font-bold rounded-full hover:bg-slate-200 transition-colors text-center">View Portfolio</a>
+                    <a href="signup.html" class="px-8 py-4 glass text-strong font-bold rounded-full hover:bg-strong text-bg/10 transition-colors border border-divider text-center flex items-center justify-center gap-2">
                         Start a Brief
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
@@ -98,16 +118,16 @@
             </div>
             <div class="relative" data-aos="fade-left" data-aos-delay="200">
                 <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-3xl transform rotate-6 animate-glow opacity-50 blur-xl"></div>
-                <img src="images/ar_hero.png" alt="AR Experience" class="relative rounded-3xl shadow-2xl animate-float border border-white/10 object-cover w-full h-[500px]">
+                <img src="images/ar_hero.png" alt="AR Experience" class="relative rounded-3xl shadow-2xl animate-float border border-divider object-cover w-full h-[500px]">
                 
                 <!-- Floating Glass Card -->
                 <div class="absolute -bottom-6 -left-6 glass p-4 rounded-2xl flex items-center gap-4 animate-float-delayed">
                     <div class="w-12 h-12 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <svg class="w-6 h-6 text-strong" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                     </div>
                     <div>
-                        <p class="font-bold text-white">10M+ Impressions</p>
-                        <p class="text-sm text-slate-300">Generated this month</p>
+                        <p class="font-bold text-strong">10M+ Impressions</p>
+                        <p class="text-sm text-muted">Generated this month</p>
                     </div>
                 </div>
             </div>
@@ -119,7 +139,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl font-bold font-display mb-4">Trending <span class="text-gradient">Experiences</span></h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">Explore our most successful recent campaigns that drove massive engagement and viral sharing.</p>
+                <p class="text-muted max-w-2xl mx-auto">Explore our most successful recent campaigns that drove massive engagement and viral sharing.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -129,12 +149,12 @@
                         <img src="images/neon_cyberpunk.png" alt="Neon Cyberpunk Filter" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80"></div>
                         <div class="absolute bottom-4 left-4">
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold">Instagram</span>
+                            <span class="px-3 py-1 bg-strong text-bg/20 backdrop-blur-md rounded-full text-xs font-semibold">Instagram</span>
                         </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold font-display mb-2">Neon Cyberpunk</h3>
-                        <p class="text-slate-400 text-sm mb-4">A futuristic beauty filter with glowing accents and glitch effects. Used by top tech influencers.</p>
+                        <p class="text-muted text-sm mb-4">A futuristic beauty filter with glowing accents and glitch effects. Used by top tech influencers.</p>
                         <div class="flex justify-between items-center text-sm font-medium">
                             <span class="text-primary">4.2M Views</span>
                             <span class="text-secondary">850K Saves</span>
@@ -148,12 +168,12 @@
                         <img src="images/ethereal_beauty.png" alt="Ethereal Beauty Filter" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80"></div>
                         <div class="absolute bottom-4 left-4">
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold">TikTok</span>
+                            <span class="px-3 py-1 bg-strong text-bg/20 backdrop-blur-md rounded-full text-xs font-semibold">TikTok</span>
                         </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold font-display mb-2">Ethereal Beauty</h3>
-                        <p class="text-slate-400 text-sm mb-4">Soft glam with floating golden particles. Designed for a luxury cosmetics brand launch.</p>
+                        <p class="text-muted text-sm mb-4">Soft glam with floating golden particles. Designed for a luxury cosmetics brand launch.</p>
                         <div class="flex justify-between items-center text-sm font-medium">
                             <span class="text-primary">12M Views</span>
                             <span class="text-secondary">2.1M Saves</span>
@@ -167,12 +187,12 @@
                         <img src="images/product_try_on.png" alt="3D Product Try-on" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80"></div>
                         <div class="absolute bottom-4 left-4">
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold">Snapchat</span>
+                            <span class="px-3 py-1 bg-strong text-bg/20 backdrop-blur-md rounded-full text-xs font-semibold">Snapchat</span>
                         </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold font-display mb-2">3D Sneaker Try-on</h3>
-                        <p class="text-slate-400 text-sm mb-4">Interactive foot tracking allowing users to virtually try on the latest streetwear drops.</p>
+                        <p class="text-muted text-sm mb-4">Interactive foot tracking allowing users to virtually try on the latest streetwear drops.</p>
                         <div class="flex justify-between items-center text-sm font-medium">
                             <span class="text-primary">8M Views</span>
                             <span class="text-secondary">Conversions: 4.5%</span>
@@ -182,7 +202,7 @@
             </div>
             
             <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
-                <a href="portfolio.html" class="inline-flex items-center gap-2 text-white font-bold hover:text-primary transition-colors">
+                <a href="portfolio.html" class="inline-flex items-center gap-2 text-strong font-bold hover:text-primary transition-colors">
                     See All Projects
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
@@ -197,7 +217,7 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/3" data-aos="fade-right">
                     <h2 class="text-4xl font-bold font-display mb-6">Trusted by<br><span class="text-gradient">Creators & Brands</span></h2>
-                    <p class="text-slate-400 mb-8">We don't just make filters; we build engaging digital assets that drive real metrics and cultural moments.</p>
+                    <p class="text-muted mb-8">We don't just make filters; we build engaging digital assets that drive real metrics and cultural moments.</p>
                     <div class="flex items-center gap-4">
                         <div class="flex -space-x-4">
                             <img class="w-12 h-12 rounded-full border-2 border-dark" src="images/avatar1.png" alt="Avatar">
@@ -220,12 +240,12 @@
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                         </div>
-                        <p class="text-slate-300 italic mb-6">"The AR filter created for our summer campaign broke all engagement records. It was flawless and on-brand. Highly recommend their technical expertise."</p>
+                        <p class="text-muted italic mb-6">"The AR filter created for our summer campaign broke all engagement records. It was flawless and on-brand. Highly recommend their technical expertise."</p>
                         <div class="flex items-center gap-4">
                             <img src="images/client_sarah.png" alt="Client" class="w-10 h-10 rounded-full">
                             <div>
                                 <h4 class="font-bold">Sarah Jenkins</h4>
-                                <p class="text-xs text-slate-400">Marketing Director, Glow Cosmetics</p>
+                                <p class="text-xs text-muted">Marketing Director, Glow Cosmetics</p>
                             </div>
                         </div>
                     </div>
@@ -239,12 +259,12 @@
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                         </div>
-                        <p class="text-slate-300 italic mb-6">"Our Snapchat lens got 10 million plays in the first week. The 3D modeling and animation quality were out of this world. Best creative investment we made this year."</p>
+                        <p class="text-muted italic mb-6">"Our Snapchat lens got 10 million plays in the first week. The 3D modeling and animation quality were out of this world. Best creative investment we made this year."</p>
                         <div class="flex items-center gap-4">
                             <img src="images/client_david.png" alt="Client" class="w-10 h-10 rounded-full">
                             <div>
                                 <h4 class="font-bold">David Chen</h4>
-                                <p class="text-xs text-slate-400">Founder, NextGen Apparel</p>
+                                <p class="text-xs text-muted">Founder, NextGen Apparel</p>
                             </div>
                         </div>
                     </div>
@@ -256,19 +276,19 @@
     <!-- SECTION 4: CTA & Footer -->
     <section class="py-24 relative overflow-hidden bg-surface">
         <div class="absolute inset-0 bg-[url('https://www.google.com/')] bg-cover bg-center opacity-10"></div>
-        <div class="absolute inset-0 bg-dark/80"></div>
+        <div class="absolute inset-0 bg-bg/80"></div>
         
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="zoom-in">
             <h2 class="text-5xl font-bold font-display mb-6">Ready to create <br>something <span class="text-gradient">magical?</span></h2>
-            <p class="text-xl text-slate-300 mb-10">Let's collaborate to build an AR experience that your audience will love and share.</p>
-            <a href="signup.html" class="inline-block px-10 py-5 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-full hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] transition-all duration-300 transform hover:-translate-y-2 text-lg">
+            <p class="text-xl text-muted mb-10">Let's collaborate to build an AR experience that your audience will love and share.</p>
+            <a href="signup.html" class="inline-block px-10 py-5 bg-gradient-to-r from-primary to-secondary text-strong font-bold rounded-full hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] transition-all duration-300 transform hover:-translate-y-2 text-lg">
                 Start Your Project Brief
             </a>
         </div>
     </section>
 
     <!-- SECTION 5: How It Works -->
-    <section class="py-24 relative overflow-hidden bg-dark">
+    <section class="py-24 relative overflow-hidden bg-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h2 class="text-4xl font-bold font-display mb-16 text-center" data-aos="fade-up">How It <span class="text-gradient">Works</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
@@ -277,21 +297,21 @@
                         <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                     </div>
                     <h3 class="text-2xl font-bold font-display mb-4">1. Scan & Unlock</h3>
-                    <p class="text-slate-400">Users scan a custom QR code or click a link from your social media bio to instantly launch the AR camera.</p>
+                    <p class="text-muted">Users scan a custom QR code or click a link from your social media bio to instantly launch the AR camera.</p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200">
                     <div class="w-20 h-20 mx-auto glass rounded-full flex items-center justify-center text-secondary mb-6">
                         <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <h3 class="text-2xl font-bold font-display mb-4">2. Engage</h3>
-                    <p class="text-slate-400">The filter responds to facial expressions, hand gestures, or environmental tracking, immersing the user.</p>
+                    <p class="text-muted">The filter responds to facial expressions, hand gestures, or environmental tracking, immersing the user.</p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300">
                     <div class="w-20 h-20 mx-auto glass rounded-full flex items-center justify-center text-primary mb-6">
                         <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
                     </div>
                     <h3 class="text-2xl font-bold font-display mb-4">3. Share & Go Viral</h3>
-                    <p class="text-slate-400">Users effortlessly capture photos or videos of their experience and share them with their networks.</p>
+                    <p class="text-muted">Users effortlessly capture photos or videos of their experience and share them with their networks.</p>
                 </div>
             </div>
         </div>
@@ -303,9 +323,9 @@
             <div class="flex justify-between items-end mb-12" data-aos="fade-up">
                 <div>
                     <h2 class="text-4xl font-bold font-display mb-2">Latest <span class="text-gradient">Insights</span></h2>
-                    <p class="text-slate-400">News and trends from the spatial computing frontier.</p>
+                    <p class="text-muted">News and trends from the spatial computing frontier.</p>
                 </div>
-                <a href="#" class="hidden sm:inline-block text-primary hover:text-white font-bold transition-colors">View All &rarr;</a>
+                <a href="#" class="hidden sm:inline-block text-primary hover:text-strong font-bold transition-colors">View All &rarr;</a>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Blog Post 1 -->
@@ -316,7 +336,7 @@
                     <div class="p-6">
                         <p class="text-xs text-primary font-bold tracking-wide uppercase mb-2">Trend Report</p>
                         <h3 class="text-2xl font-bold font-display mb-3 group-hover:text-primary transition-colors">Why Apple Vision Pro changes the game for mobile AR</h3>
-                        <p class="text-slate-400 text-sm">Exploring the bridge between headset passthrough and smartphone-based augmented reality filters.</p>
+                        <p class="text-muted text-sm">Exploring the bridge between headset passthrough and smartphone-based augmented reality filters.</p>
                     </div>
                 </a>
                 <!-- Blog Post 2 -->
@@ -327,7 +347,7 @@
                     <div class="p-6">
                         <p class="text-xs text-secondary font-bold tracking-wide uppercase mb-2">Tutorial</p>
                         <h3 class="text-2xl font-bold font-display mb-3 group-hover:text-secondary transition-colors">Optimizing Shaders for TikTok Effect House</h3>
-                        <p class="text-slate-400 text-sm">Learn how to compress your custom materials to ensure your effects load instantly on any network.</p>
+                        <p class="text-muted text-sm">Learn how to compress your custom materials to ensure your effects load instantly on any network.</p>
                     </div>
                 </a>
             </div>
@@ -339,21 +359,21 @@
         <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 opacity-30 blur-2xl"></div>
         <div class="max-w-3xl mx-auto px-4 text-center relative z-10" data-aos="zoom-in">
             <h2 class="text-3xl font-bold font-display mb-4">Stay Ahead of the Curve</h2>
-            <p class="text-slate-400 mb-8">Join 15,000+ marketers and creators receiving our monthly roundup of viral AR mechanics and spatial computing news.</p>
+            <p class="text-muted mb-8">Join 15,000+ marketers and creators receiving our monthly roundup of viral AR mechanics and spatial computing news.</p>
             <form class="flex flex-col sm:flex-row gap-4 justify-center">
-                <input type="email" placeholder="Enter your email address" class="px-6 py-4 bg-dark/50 border border-white/20 rounded-full focus:outline-none focus:border-primary text-white w-full sm:w-96">
-                <button type="submit" class="px-8 py-4 bg-white text-dark font-bold rounded-full hover:bg-slate-200 transition-colors">Subscribe</button>
+                <input type="email" placeholder="Enter your email address" class="px-6 py-4 bg-bg/50 border border-divider rounded-full focus:outline-none focus:border-primary text-strong w-full sm:w-96">
+                <button type="submit" class="px-8 py-4 bg-strong text-bg text-dark font-bold rounded-full hover:bg-slate-200 transition-colors">Subscribe</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark border-t border-white/10 py-8 relative z-10">
+    <footer class="bg-bg border-t border-divider py-8 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
             <div class="text-2xl font-bold font-display text-gradient mb-4 md:mb-0">AR Vision</div>
-            <p class="text-slate-500 text-sm">© 2026 AR Vision. All rights reserved.</p>
+            <p class="text-muted text-sm">© 2026 AR Vision. All rights reserved.</p>
             <div class="flex space-x-4 mt-4 md:mt-0">
-                <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                <a href="#" class="text-muted hover:text-strong transition-colors">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                 </a>
                 <!-- Other socials... -->
