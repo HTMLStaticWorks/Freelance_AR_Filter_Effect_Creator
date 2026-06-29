@@ -63,12 +63,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const rtlDesktop = document.getElementById('rtl-toggle-desktop');
     const rtlMobile = document.getElementById('rtl-toggle-mobile');
     
+    function updateRTLText(isRTL) {
+        const text = isRTL ? 'EN' : 'AR';
+        if (rtlDesktop) rtlDesktop.innerHTML = `<span class="text-sm font-bold">${text}</span>`;
+        if (rtlMobile) rtlMobile.innerHTML = `<span class="text-sm font-bold">${text}</span>`;
+    }
+
     function toggleRTL() {
         const isRTL = document.documentElement.dir === 'rtl';
         document.documentElement.dir = isRTL ? 'ltr' : 'rtl';
         localStorage.setItem('rtl', document.documentElement.dir);
+        updateRTLText(!isRTL);
     }
     
     if (rtlDesktop) rtlDesktop.addEventListener('click', toggleRTL);
     if (rtlMobile) rtlMobile.addEventListener('click', toggleRTL);
+    
+    // Set initial text
+    updateRTLText(savedRTL === 'rtl');
+
+    // Scroll to Top Button
+    const scrollTopBtn = document.createElement('button');
+    scrollTopBtn.id = 'scroll-to-top';
+    scrollTopBtn.innerHTML = `
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    `;
+    scrollTopBtn.className = 'fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 glass text-primary p-3 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:-translate-y-1 focus:outline-none flex items-center justify-center translate-y-10';
+    document.body.appendChild(scrollTopBtn);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-10');
+            scrollTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        } else {
+            scrollTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-10');
+            scrollTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 });
