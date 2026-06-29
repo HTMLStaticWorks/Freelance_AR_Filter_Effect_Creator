@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Filter Creator | Start Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8b5cf6',
+                        secondary: '#ec4899',
+                        dark: '#0f172a',
+                        surface: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark text-slate-200 antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold font-display text-gradient">AR Vision</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link text-slate-300 hover:text-white font-medium">Home</a>
+                    <a href="home2.html" class="nav-link text-slate-300 hover:text-white font-medium">Brands</a>
+                    <a href="about.html" class="nav-link text-slate-300 hover:text-white font-medium">About</a>
+                    <a href="service.html" class="nav-link text-slate-300 hover:text-white font-medium">Services</a>
+                    <a href="portfolio.html" class="nav-link text-slate-300 hover:text-white font-medium">Portfolio</a>
+                    <a href="pricing.html" class="nav-link text-slate-300 hover:text-white font-medium">Pricing</a>
+                    <a href="contact.html" class="nav-link text-slate-300 hover:text-white font-medium">Contact</a>
+                    <a href="signup.html" class="bg-gradient-to-r from-primary to-secondary px-6 py-2 rounded-full text-white font-semibold">Start Project</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: Signup Hero -->
+    <section class="pt-32 pb-12 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.google.com/')] bg-cover bg-center opacity-10"></div>
+        <div class="max-w-3xl mx-auto px-4 text-center relative z-10" data-aos="zoom-in">
+            <h1 class="text-5xl md:text-6xl font-extrabold font-display mb-6">Start Your <span class="text-gradient">Project</span></h1>
+            <p class="text-xl text-slate-400">Fill out the creative brief below to access the client portal and kick off the design process.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Registration & Brief Form -->
+    <section class="py-12 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass p-8 md:p-12 rounded-3xl border-t-4 border-primary" data-aos="fade-up">
+                <form action="#" method="POST" class="space-y-8">
+                    <!-- Client Details -->
+                    <div>
+                        <h3 class="text-2xl font-bold font-display mb-6 text-white border-b border-white/10 pb-2">Client Details</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-400 mb-2">Company / Brand Name</label>
+                                <input type="text" class="w-full bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary transition" placeholder="e.g. Acme Corp">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-400 mb-2">Contact Email</label>
+                                <input type="email" class="w-full bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary transition" placeholder="you@company.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Details -->
+                    <div>
+                        <h3 class="text-2xl font-bold font-display mb-6 text-white border-b border-white/10 pb-2">Project Brief</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-400 mb-2">Target Platform(s)</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="rounded text-primary focus:ring-primary bg-dark border-white/10"> <span class="text-slate-300">Instagram / Facebook</span></label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="rounded text-primary focus:ring-primary bg-dark border-white/10"> <span class="text-slate-300">Snapchat</span></label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="rounded text-primary focus:ring-primary bg-dark border-white/10"> <span class="text-slate-300">TikTok</span></label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-400 mb-2">Estimated Budget</label>
+                                <select class="w-full bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-slate-300 focus:border-primary transition appearance-none">
+                                    <option>$800 - $1,500 (Basic)</option>
+                                    <option>$1,500 - $3,000 (Pro)</option>
+                                    <option>$3,000+ (Enterprise)</option>
+                                    <option>Not Sure Yet</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-400 mb-2">Describe the concept</label>
+                            <textarea rows="4" class="w-full bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary transition" placeholder="Tell us what you want the filter to do..."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-xl text-lg hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] transition-all">Submit Brief & Create Account</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Benefits -->
+    <section class="py-16 bg-surface border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display mb-12 text-center">Why Create an Account?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto bg-primary/20 rounded-2xl flex items-center justify-center text-primary mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-white mb-2">Live Test Links</h4>
+                    <p class="text-sm text-slate-400">Access exclusive testing links directly on your phone as we build.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto bg-secondary/20 rounded-2xl flex items-center justify-center text-secondary mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-white mb-2">Analytics Dashboard</h4>
+                    <p class="text-sm text-slate-400">View real-time performance metrics once your filter goes live.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 mx-auto bg-emerald-500/20 rounded-2xl flex items-center justify-center text-emerald-400 mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-white mb-2">Asset Management</h4>
+                    <p class="text-sm text-slate-400">Easily upload brand logos, 3D files, and download final exports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Trust Badge -->
+    <section class="py-12">
+        <div class="max-w-3xl mx-auto px-4 text-center flex flex-col items-center justify-center text-slate-500" data-aos="fade-up">
+            <svg class="w-12 h-12 mb-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            <p class="text-sm max-w-md">Your project details are strictly confidential. We sign NDAs for unreleased products and campaigns upon request.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 5: What Happens Next -->
+    <section class="py-24 bg-dark relative overflow-hidden border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display mb-16 text-center" data-aos="fade-up">What Happens <span class="text-gradient">Next?</span></h2>
+            <div class="flex flex-col md:flex-row justify-center items-start gap-8 relative">
+                <!-- Connecting Line -->
+                <div class="hidden md:block absolute top-12 left-1/6 w-2/3 h-1 bg-gradient-to-r from-primary via-secondary to-primary opacity-50 z-0"></div>
+                
+                <div class="relative z-10 text-center flex-1" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-24 h-24 mx-auto glass rounded-full flex items-center justify-center text-primary mb-6 shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-white mb-2">1. Confirmation Email</h4>
+                    <p class="text-sm text-slate-400">You'll instantly receive an email confirming receipt of your brief and a link to set your password.</p>
+                </div>
+                <div class="relative z-10 text-center flex-1" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-24 h-24 mx-auto glass rounded-full flex items-center justify-center text-secondary mb-6 shadow-[0_0_20px_rgba(236,72,153,0.3)]">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-white mb-2">2. Discovery Call</h4>
+                    <p class="text-sm text-slate-400">Within 24 hours, we'll schedule a quick 15-minute Google Meet to align on the creative direction.</p>
+                </div>
+                <div class="relative z-10 text-center flex-1" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-24 h-24 mx-auto glass rounded-full flex items-center justify-center text-emerald-400 mb-6 shadow-[0_0_20px_rgba(52,211,153,0.3)]">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-white mb-2">3. First Draft</h4>
+                    <p class="text-sm text-slate-400">You will receive a test link to try the first iteration of your filter on your own device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: Preparation Guide -->
+    <section class="py-24 bg-surface border-y border-white/5 relative">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold font-display mb-12 text-center" data-aos="fade-up">Client <span class="text-gradient">Checklist</span></h2>
+            <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                <p class="text-slate-400 mb-6">To ensure a smooth project kickoff, please start gathering the following assets. You will be able to upload them directly into your portal once your account is created.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <label class="flex items-center gap-3 p-4 bg-dark/50 rounded-xl border border-white/5">
+                        <input type="checkbox" disabled class="rounded text-primary bg-dark border-white/20">
+                        <span class="text-slate-300 text-sm">High-res vector logos (.svg or .eps)</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-4 bg-dark/50 rounded-xl border border-white/5">
+                        <input type="checkbox" disabled class="rounded text-primary bg-dark border-white/20">
+                        <span class="text-slate-300 text-sm">Brand guidelines / Hex color codes</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-4 bg-dark/50 rounded-xl border border-white/5">
+                        <input type="checkbox" disabled class="rounded text-primary bg-dark border-white/20">
+                        <span class="text-slate-300 text-sm">Any existing 3D models (.obj, .fbx)</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-4 bg-dark/50 rounded-xl border border-white/5">
+                        <input type="checkbox" disabled class="rounded text-primary bg-dark border-white/20">
+                        <span class="text-slate-300 text-sm">Custom fonts used by your brand</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: Portal Preview -->
+    <section class="py-24 bg-dark relative overflow-hidden">
+        <div class="absolute inset-0 bg-primary/5"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl font-bold font-display mb-6" data-aos="fade-up">A Look <span class="text-gradient">Inside</span></h2>
+            <p class="text-slate-400 mb-12 max-w-2xl mx-auto">Say goodbye to messy email chains. Our custom client portal keeps your project files, feedback, and invoices all in one secure place.</p>
+            
+            <div class="relative max-w-5xl mx-auto rounded-[2rem] border border-white/20 shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+                <!-- Mac UI Bar -->
+                <div class="bg-surface h-10 w-full flex items-center px-4 gap-2 border-b border-white/10">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div class="mx-auto text-xs text-slate-500 font-mono">client.arvision.com</div>
+                </div>
+                <!-- Portal Image -->
+                <img src="images/code_screen.png" alt="Client Portal Interface" class="w-full opacity-80 mix-blend-lighten object-cover max-h-[600px]">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-8 text-center text-slate-500 border-t border-white/10">
+        <p>© 2026 AR Vision. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

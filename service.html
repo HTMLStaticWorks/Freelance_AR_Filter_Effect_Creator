@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Filter Creator | Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8b5cf6',
+                        secondary: '#ec4899',
+                        dark: '#0f172a',
+                        surface: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark text-slate-200 antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold font-display text-gradient">AR Vision</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link text-slate-300 hover:text-white font-medium">Home</a>
+                    <a href="home2.html" class="nav-link text-slate-300 hover:text-white font-medium">Brands</a>
+                    <a href="about.html" class="nav-link text-slate-300 hover:text-white font-medium">About</a>
+                    <a href="service.html" class="nav-link text-white font-medium">Services</a>
+                    <a href="portfolio.html" class="nav-link text-slate-300 hover:text-white font-medium">Portfolio</a>
+                    <a href="pricing.html" class="nav-link text-slate-300 hover:text-white font-medium">Pricing</a>
+                    <a href="contact.html" class="nav-link text-slate-300 hover:text-white font-medium">Contact</a>
+                    <a href="signup.html" class="bg-gradient-to-r from-primary to-secondary px-6 py-2 rounded-full text-white font-semibold">Start Project</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: Services Hero -->
+    <section class="pt-32 pb-24 relative bg-[url('https://www.google.com/')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-dark/90 backdrop-blur-sm"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10" data-aos="zoom-in">
+            <h1 class="text-5xl md:text-7xl font-extrabold font-display mb-6">Expertise & <br><span class="text-gradient">Services</span></h1>
+            <p class="text-xl text-slate-300 mb-8">From concept to deployment, we build AR filters tailored for the platforms where your audience lives.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Core Services -->
+    <section class="py-24 bg-surface relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Instagram/Facebook -->
+                <div class="glass p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold font-display mb-4">Meta Spark AR</h3>
+                    <p class="text-slate-400 mb-4">Filters for Instagram and Facebook. Perfect for beauty try-ons, interactive mini-games, and viral aesthetic overlays.</p>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li>&check; Face Tracking</li>
+                        <li>&check; Target Tracking (Posters/Products)</li>
+                        <li>&check; Real-time 3D Rendering</li>
+                    </ul>
+                </div>
+                <!-- Snapchat -->
+                <div class="glass p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 rounded-2xl bg-[#FFFC00] flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M12.1 23.4c-2.4 0-4.6-.7-6.2-1.9-.5-.4-1.1-.3-1.5.1-.4.4-.4 1 .1 1.4 1.9 1.5 4.5 2.4 7.3 2.4 2.8 0 5.4-.9 7.3-2.4.4-.4.4-1 .1-1.4-.4-.4-1-.5-1.5-.1-1.6 1.2-3.8 1.9-6.2 1.9h.6zM22.5 13.9c-1-.5-2.1-1-3.2-1.5 0-.1 0-.2.1-.4 1.7-6.5-.4-11-5.7-11.8C12.8.1 11.9 0 11 0c-.9 0-1.8.1-2.7.2-5.3.8-7.4 5.3-5.7 11.8 0 .1.1.2.1.4-1.1.5-2.2 1-3.2 1.5-1 .5-1.2 1.5-.6 2.3 1.2 1.5 2.5 2.5 3.9 3.2 1 .5 2 .2 2.7-.6.7-.8 1.8-1.5 2.9-1.5h4.2c1.1 0 2.2.7 2.9 1.5.7.8 1.7 1.1 2.7.6 1.4-.7 2.7-1.7 3.9-3.2.6-.8.4-1.8-.6-2.3z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold font-display mb-4">Snap Lens Studio</h3>
+                    <p class="text-slate-400 mb-4">Highly advanced lenses featuring body tracking, hand tracking, and world mesh generation for the Snap Gen Z demographic.</p>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li>&check; Full Body Tracking</li>
+                        <li>&check; Connected Lenses (Multiplayer)</li>
+                        <li>&check; Cloth Simulation</li>
+                    </ul>
+                </div>
+                <!-- TikTok -->
+                <div class="glass p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 rounded-2xl bg-black flex items-center justify-center mb-6 border border-white/20">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v7.2c0 1.63-.52 3.23-1.49 4.54-1.14 1.55-2.88 2.57-4.8 2.92-1.92.35-3.95.12-5.69-.74-1.74-.86-3.1-2.31-3.83-4.06-.73-1.75-.82-3.7-.26-5.49.56-1.79 1.76-3.29 3.32-4.18 1.56-.89 3.42-1.14 5.2-.7v4.14c-.66-.23-1.39-.27-2.07-.12-.68.15-1.29.53-1.72 1.05-.43.52-.69 1.18-.73 1.86-.04.68.13 1.35.48 1.92.35.57.86 1.01 1.46 1.25.6.24 1.27.27 1.89.08.62-.19 1.17-.58 1.54-1.1.37-.52.57-1.15.57-1.79V.02h2.02z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold font-display mb-4">TikTok Effect House</h3>
+                    <p class="text-slate-400 mb-4">Trend-driven effects optimized for the For You Page. Perfect for sound-synced animations and interactive challenges.</p>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li>&check; Audio Reactivity</li>
+                        <li>&check; 2D/3D Tracking</li>
+                        <li>&check; Viral Logic Templates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Analytics & Tracking -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <div class="glass p-6 rounded-3xl relative">
+                        <div class="absolute -top-4 -right-4 w-16 h-16 bg-secondary rounded-full animate-bounce flex items-center justify-center font-bold text-white shadow-xl">ROI</div>
+                        <img src="https://www.google.com/" alt="Analytics Dashboard" class="rounded-2xl w-full">
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h2 class="text-4xl font-bold font-display mb-6">Data-Driven <span class="text-gradient">Performance</span></h2>
+                    <p class="text-slate-400 mb-6 text-lg">We don't just launch filters; we track their impact. Our clients receive comprehensive reporting dashboards detailing how users interact with the AR assets.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg></div>
+                            <div>
+                                <h4 class="font-bold text-white">Impressions & Opens</h4>
+                                <p class="text-sm text-slate-500">How many times the filter was viewed in the camera.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center text-secondary"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                            <div>
+                                <h4 class="font-bold text-white">Dwell Time</h4>
+                                <p class="text-sm text-slate-500">Average time spent interacting with the experience.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg></div>
+                            <div>
+                                <h4 class="font-bold text-white">Captures & Shares</h4>
+                                <p class="text-sm text-slate-500">Conversion metrics indicating viral spread.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Campaign Integration -->
+    <section class="py-24 bg-surface border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold font-display mb-8" data-aos="fade-up">Seamless <span class="text-gradient">Integration</span></h2>
+            <p class="text-lg text-slate-400 mb-12" data-aos="fade-up" data-aos-delay="100">An AR filter shouldn't exist in a vacuum. We help you integrate the digital experience into your physical marketing efforts.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left">
+                <div class="glass p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/icon_qrcode.svg" alt="QR Code Activation" class="w-12 h-12 mb-6">
+                    <h3 class="text-xl font-bold mb-3">QR Code Activation</h3>
+                    <p class="text-slate-400 text-sm">We provide custom branded QR codes to place on packaging, billboards, or point-of-sale displays to instantly launch the filter.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/icon_influencer.svg" alt="Influencer Kits" class="w-12 h-12 mb-6">
+                    <h3 class="text-xl font-bold mb-3">Influencer Kits</h3>
+                    <p class="text-slate-400 text-sm">Providing usage guides and demo links for your influencer partners to ensure they use the filter correctly on launch day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Technical Optimization -->
+    <section class="py-24 bg-dark relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <h2 class="text-4xl font-bold font-display mb-6">Technical <span class="text-gradient">Optimization</span></h2>
+                    <p class="text-slate-400 mb-6 text-lg">Platform limits are strict (often under 4MB). We excel in compressing textures, optimizing 3D mesh topologies, and writing efficient shaders to ensure your filter looks stunning without lagging on older devices.</p>
+                    <div class="space-y-4">
+                        <div class="glass p-4 rounded-xl flex items-center justify-between">
+                            <span class="font-bold text-white">Texture Compression</span>
+                            <span class="text-primary font-mono bg-primary/20 px-2 py-1 rounded">KTX2 / ASTC</span>
+                        </div>
+                        <div class="glass p-4 rounded-xl flex items-center justify-between">
+                            <span class="font-bold text-white">Poly Count Reduction</span>
+                            <span class="text-secondary font-mono bg-secondary/20 px-2 py-1 rounded">Retopology</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="glass p-8 rounded-3xl relative">
+                        <!-- Abstract visual representing compression -->
+                        <div class="grid grid-cols-4 gap-2 opacity-70">
+                            <!-- Just some blocks -->
+                            <div class="h-12 bg-primary/30 rounded animate-pulse"></div>
+                            <div class="h-12 bg-secondary/30 rounded animate-pulse" style="animation-delay: 0.2s"></div>
+                            <div class="h-12 bg-white/30 rounded animate-pulse" style="animation-delay: 0.4s"></div>
+                            <div class="h-12 bg-emerald-500/30 rounded animate-pulse" style="animation-delay: 0.6s"></div>
+                            <div class="col-span-2 h-12 bg-secondary/20 rounded"></div>
+                            <div class="col-span-2 h-12 bg-primary/20 rounded"></div>
+                        </div>
+                        <p class="text-center mt-6 text-sm text-slate-400 font-mono">Total File Size: <span class="text-emerald-400 font-bold">1.8 MB</span> (Under 4MB limit)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: Advanced Scripting -->
+    <section class="py-24 bg-surface border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold font-display mb-12 text-center" data-aos="fade-up">Advanced <span class="text-gradient">Capabilities</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-3 text-white">Logic & Mini-Games</h3>
+                    <p class="text-slate-400 text-sm">We build complex state machines using JavaScript and Visual Scripting. Catching objects, high scores, and multi-level progression mechanics.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-3 text-white">External API Calls</h3>
+                    <p class="text-slate-400 text-sm">Connecting filters to real-world data like live weather, sports scores, or dynamic inventory for virtual try-ons.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-3 text-white">Custom Shaders</h3>
+                    <p class="text-slate-400 text-sm">Writing GLSL/Metal shaders from scratch to create materials that platforms don't support out of the box (e.g., iridescence, refraction).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: Maintenance Add-ons -->
+    <section class="py-24 bg-dark border-t border-white/5 relative">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold font-display mb-6" data-aos="fade-up">Post-Launch Support</h2>
+            <p class="text-lg text-slate-400 mb-12" data-aos="fade-up" data-aos-delay="100">The platforms update their AR engines frequently. We offer maintenance packages to ensure your filter never breaks and continues to perform flawlessly.</p>
+            <div class="inline-block glass p-6 rounded-full border border-primary/30" data-aos="zoom-in" data-aos-delay="200">
+                <p class="font-bold text-white">Includes: <span class="text-slate-400 font-normal ml-2">Engine Updates • Bug Fixes • Analytics Reporting • Asset Swaps</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-8 text-center text-slate-500 border-t border-white/10">
+        <p>© 2026 AR Vision. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

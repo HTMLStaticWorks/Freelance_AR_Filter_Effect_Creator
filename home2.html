@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Filter Creator | Brands</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8b5cf6',
+                        secondary: '#ec4899',
+                        dark: '#0f172a',
+                        surface: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark text-slate-200 antialiased">
+
+    <!-- Navbar Snippet -->
+    <nav class="fixed w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold font-display text-gradient">AR Vision</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link text-slate-300 hover:text-white font-medium">Home</a>
+                    <a href="home2.html" class="nav-link text-white font-medium">Brands</a>
+                    <a href="about.html" class="nav-link text-slate-300 hover:text-white font-medium">About</a>
+                    <a href="service.html" class="nav-link text-slate-300 hover:text-white font-medium">Services</a>
+                    <a href="portfolio.html" class="nav-link text-slate-300 hover:text-white font-medium">Portfolio</a>
+                    <a href="pricing.html" class="nav-link text-slate-300 hover:text-white font-medium">Pricing</a>
+                    <a href="contact.html" class="nav-link text-slate-300 hover:text-white font-medium">Contact</a>
+                    <a href="signup.html" class="bg-gradient-to-r from-primary to-secondary px-6 py-2 rounded-full text-white font-semibold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">Start Project</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none p-2">
+                        <svg class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                        <svg class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden glass border-t border-white/10 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="index.html" class="text-slate-300 block px-3 py-2">Home</a>
+                <a href="home2.html" class="text-white block px-3 py-2">Brands</a>
+                <!-- ... -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: Brand Hero -->
+    <section class="relative min-h-[90vh] flex items-center pt-20">
+        <div class="absolute inset-0 z-0">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-20">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-holographic-liquid-flowing-in-waves-97693-large.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-dark via-dark/50 to-dark"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="fade-up">
+            <span class="px-4 py-2 rounded-full glass text-primary font-semibold text-sm mb-6 inline-block uppercase tracking-wider">For Brands & Agencies</span>
+            <h1 class="text-5xl md:text-8xl font-extrabold font-display leading-tight mb-6">
+                Turn Viewers Into <br><span class="text-gradient">Participants</span>
+            </h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto mb-10">We engineer viral AR campaigns that transform passive scrolling into active brand engagement.</p>
+            <div class="flex justify-center gap-4">
+                <a href="#case-studies" class="px-8 py-4 bg-white text-dark font-bold rounded-full hover:bg-slate-200 transition-colors">See Case Studies</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Brand Partners -->
+    <section class="py-16 bg-surface border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-slate-500 font-semibold mb-8 tracking-widest uppercase text-sm">Trusted by Global Innovators</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Placeholder Logos using Text/Icons -->
+                <img src="images/logo_vogue.svg" alt="Vogue" class="h-10">
+                <img src="images/logo_nike.svg" alt="Nike" class="h-10">
+                <img src="images/logo_loreal.svg" alt="L'Oréal" class="h-10">
+                <img src="images/logo_samsung.svg" alt="Samsung" class="h-10">
+                <img src="images/logo_sony.svg" alt="Sony" class="h-10">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Case Studies -->
+    <section id="case-studies" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold font-display mb-16 text-center" data-aos="fade-up">Featured <span class="text-gradient">Campaigns</span></h2>
+            
+            <div class="space-y-24">
+                <!-- Case Study 1 -->
+                <div class="flex flex-col md:flex-row items-center gap-12" data-aos="fade-right">
+                    <div class="md:w-1/2">
+                        <img src="images/nike_campaign.png" alt="Nike Campaign" class="rounded-3xl shadow-2xl animate-float">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-3xl font-bold font-display mb-4">Virtual Sneaker Drop</h3>
+                        <p class="text-slate-400 mb-6">We partnered with a major streetwear brand to launch an exclusive virtual try-on experience. Users could "wear" the unreleased sneakers and unlock a secret pre-order link.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> 2.5M Unique Impressions</li>
+                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> 18% Conversion Rate</li>
+                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> Sold out in 4 hours</li>
+                        </ul>
+                        <a href="contact.html" class="text-secondary font-bold hover:text-white transition-colors">Request Full Report &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12" data-aos="fade-left">
+                    <div class="md:w-1/2">
+                        <img src="images/beauty_campaign.png" alt="Beauty Campaign" class="rounded-3xl shadow-2xl animate-float-delayed">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-3xl font-bold font-display mb-4">Interactive Beauty Masterclass</h3>
+                        <p class="text-slate-400 mb-6">A multi-stage Instagram filter that guided users through a 3-step makeup routine using a beauty brand's new fall collection, using real-time face mesh mapping.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> 45s Average Dwell Time</li>
+                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> 500K+ User Shares</li>
+                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> Webby Award Nominee</li>
+                        </ul>
+                        <a href="contact.html" class="text-primary font-bold hover:text-white transition-colors">Request Full Report &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: CTA -->
+    <section class="py-24 bg-surface border-t border-white/5 text-center">
+        <div class="max-w-3xl mx-auto px-4" data-aos="zoom-in">
+            <h2 class="text-4xl font-bold font-display mb-6">Let's discuss your next <span class="text-gradient">Activation</span></h2>
+            <p class="text-slate-400 mb-10">We work closely with agencies and brand managers to deliver flawless AR assets on time and on budget.</p>
+            <a href="signup.html" class="px-8 py-4 glass text-white font-bold rounded-full hover:bg-white/10 transition-colors border border-primary text-center inline-flex items-center gap-2">
+                Book a Consultation
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Platform Breakdown -->
+    <section class="py-24 bg-surface border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl font-bold font-display mb-16 text-center" data-aos="fade-up">Choose Your <span class="text-gradient">Platform</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl text-center" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold font-display mb-2 text-white">Instagram</h3>
+                    <p class="text-slate-400 text-sm mb-6">Best for viral beauty trends, brand awareness, and influencer amplification.</p>
+                    <div class="h-1 w-full bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 rounded-full mb-6"></div>
+                    <ul class="text-sm text-slate-300 space-y-2 text-left">
+                        <li>&check; Massive organic reach</li>
+                        <li>&check; High shareability in Stories</li>
+                        <li>&check; Seamless e-commerce linking</li>
+                    </ul>
+                </div>
+                <div class="glass p-8 rounded-3xl text-center" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold font-display mb-2 text-white">Snapchat</h3>
+                    <p class="text-slate-400 text-sm mb-6">Best for Gen-Z targeting, complex 3D world tracking, and gamification.</p>
+                    <div class="h-1 w-full bg-[#FFFC00] rounded-full mb-6"></div>
+                    <ul class="text-sm text-slate-300 space-y-2 text-left">
+                        <li>&check; Advanced body tracking</li>
+                        <li>&check; Highest average dwell time</li>
+                        <li>&check; Interactive Sponsored Lenses</li>
+                    </ul>
+                </div>
+                <div class="glass p-8 rounded-3xl text-center" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold font-display mb-2 text-white">TikTok</h3>
+                    <p class="text-slate-400 text-sm mb-6">Best for sound-reactive effects, hashtag challenges, and rapid virality.</p>
+                    <div class="h-1 w-full bg-white rounded-full mb-6"></div>
+                    <ul class="text-sm text-slate-300 space-y-2 text-left">
+                        <li>&check; Audio-synced animations</li>
+                        <li>&check; Algorithm-friendly engagement</li>
+                        <li>&check; Perfect for dance challenges</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: Performance Metrics -->
+    <section class="py-24 relative overflow-hidden bg-dark">
+        <div class="absolute inset-0 bg-primary/5"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-4xl font-bold font-display mb-16" data-aos="fade-up">The AR <span class="text-gradient">Advantage</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-6xl font-bold font-display text-white mb-2">4x</div>
+                    <p class="text-slate-400 text-sm uppercase tracking-wide">Higher conversion rate than standard video ads</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-6xl font-bold font-display text-primary mb-2">85s</div>
+                    <p class="text-slate-400 text-sm uppercase tracking-wide">Average dwell time inside interactive AR filters</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-6xl font-bold font-display text-secondary mb-2">70%</div>
+                    <p class="text-slate-400 text-sm uppercase tracking-wide">Increase in memory recall compared to 2D media</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-6xl font-bold font-display text-white mb-2">2.5B</div>
+                    <p class="text-slate-400 text-sm uppercase tracking-wide">Total organic impressions generated for clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: Awards & Recognition -->
+    <section class="py-24 bg-surface border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold font-display mb-12" data-aos="fade-up">Industry Recognition</h2>
+            <div class="flex flex-wrap justify-center items-center gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4"><img src="images/award_webby.svg" alt="Webby" class="w-full h-full"></div>
+                    <p class="text-sm font-semibold">Webby Nominee 2024</p>
+                </div>
+                <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4"><img src="images/award_fwa.svg" alt="FWA" class="w-full h-full"></div>
+                    <p class="text-sm font-semibold">FWA of the Day</p>
+                </div>
+                <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4"><img src="images/award_snap.svg" alt="Snap Partner" class="w-full h-full"></div>
+                    <p class="text-sm font-semibold">Official Snap Partner</p>
+                </div>
+                <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4"><img src="images/award_meta.svg" alt="Meta" class="w-full h-full"></div>
+                    <p class="text-sm font-semibold">Spark AR Network</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer snippet... -->
+    <footer class="bg-dark py-8 text-center text-slate-500 border-t border-white/10">
+        <p>© 2026 AR Vision. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

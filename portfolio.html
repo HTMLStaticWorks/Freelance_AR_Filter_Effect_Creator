@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Filter Creator | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8b5cf6',
+                        secondary: '#ec4899',
+                        dark: '#0f172a',
+                        surface: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark text-slate-200 antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold font-display text-gradient">AR Vision</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link text-slate-300 hover:text-white font-medium">Home</a>
+                    <a href="home2.html" class="nav-link text-slate-300 hover:text-white font-medium">Brands</a>
+                    <a href="about.html" class="nav-link text-slate-300 hover:text-white font-medium">About</a>
+                    <a href="service.html" class="nav-link text-slate-300 hover:text-white font-medium">Services</a>
+                    <a href="portfolio.html" class="nav-link text-white font-medium">Portfolio</a>
+                    <a href="pricing.html" class="nav-link text-slate-300 hover:text-white font-medium">Pricing</a>
+                    <a href="contact.html" class="nav-link text-slate-300 hover:text-white font-medium">Contact</a>
+                    <a href="signup.html" class="bg-gradient-to-r from-primary to-secondary px-6 py-2 rounded-full text-white font-semibold">Start Project</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: Portfolio Hero -->
+    <section class="pt-32 pb-16 text-center">
+        <div class="max-w-3xl mx-auto px-4" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-extrabold font-display mb-6">Selected <span class="text-gradient">Works</span></h1>
+            <p class="text-xl text-slate-400">A curated collection of augmented reality experiences built for brands, artists, and culture.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Interactive Gallery -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Filter buttons (visual only for this static demo) -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+                <button class="px-6 py-2 rounded-full bg-primary text-white font-semibold">All</button>
+                <button class="px-6 py-2 rounded-full glass hover:bg-white/10 text-slate-300 font-semibold transition">Beauty</button>
+                <button class="px-6 py-2 rounded-full glass hover:bg-white/10 text-slate-300 font-semibold transition">Gaming</button>
+                <button class="px-6 py-2 rounded-full glass hover:bg-white/10 text-slate-300 font-semibold transition">Retail</button>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/ethereal_beauty.png" alt="Neon Couture" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-bold font-display text-white">Neon Couture</h3>
+                        <p class="text-primary font-semibold mb-4">Instagram AR</p>
+                        <a href="#" class="inline-block border border-white/50 rounded-full px-6 py-2 text-white hover:bg-white hover:text-dark transition text-center backdrop-blur-sm">View Details</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/vr_headset.png" alt="Virtual Optics" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-bold font-display text-white">Virtual Optics</h3>
+                        <p class="text-primary font-semibold mb-4">Snapchat Lens</p>
+                        <a href="#" class="inline-block border border-white/50 rounded-full px-6 py-2 text-white hover:bg-white hover:text-dark transition text-center backdrop-blur-sm">View Details</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/beauty_campaign.png" alt="Glitter Bomb" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-bold font-display text-white">Glitter Bomb</h3>
+                        <p class="text-primary font-semibold mb-4">TikTok Effect</p>
+                        <a href="#" class="inline-block border border-white/50 rounded-full px-6 py-2 text-white hover:bg-white hover:text-dark transition text-center backdrop-blur-sm">View Details</a>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="group relative overflow-hidden rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/code_screen.png" alt="8-Bit Hero" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-bold font-display text-white">8-Bit Hero</h3>
+                        <p class="text-primary font-semibold mb-4">Instagram Minigame</p>
+                        <a href="#" class="inline-block border border-white/50 rounded-full px-6 py-2 text-white hover:bg-white hover:text-dark transition text-center backdrop-blur-sm">View Details</a>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="group relative overflow-hidden rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/nike_campaign.png" alt="Auto Showroom" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-bold font-display text-white">Auto Showroom</h3>
+                        <p class="text-primary font-semibold mb-4">Snapchat World Lens</p>
+                        <a href="#" class="inline-block border border-white/50 rounded-full px-6 py-2 text-white hover:bg-white hover:text-dark transition text-center backdrop-blur-sm">View Details</a>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="group relative overflow-hidden rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/product_try_on.png" alt="Diamond Try-on" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-bold font-display text-white">Diamond Try-on</h3>
+                        <p class="text-primary font-semibold mb-4">Instagram AR</p>
+                        <a href="#" class="inline-block border border-white/50 rounded-full px-6 py-2 text-white hover:bg-white hover:text-dark transition text-center backdrop-blur-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Video Mockups -->
+    <section class="py-24 bg-surface border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold font-display mb-16 text-center" data-aos="fade-up">In <span class="text-gradient">Action</span></h2>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-12">
+                <!-- Phone Mockup 1 -->
+                <div class="relative mx-auto w-[280px] h-[580px] bg-black rounded-[3rem] border-[8px] border-slate-800 shadow-2xl overflow-hidden" data-aos="fade-right">
+                    <div class="absolute top-0 w-full h-6 bg-black z-20 rounded-b-2xl"></div>
+                    <img src="https://www.google.com/" alt="Filter in action" class="w-full h-full object-cover">
+                    <!-- UI Overlay Fake -->
+                    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full border-4 border-white bg-transparent"></div>
+                </div>
+                
+                <!-- Phone Mockup 2 -->
+                <div class="relative mx-auto w-[280px] h-[580px] bg-black rounded-[3rem] border-[8px] border-slate-800 shadow-2xl overflow-hidden mt-0 md:mt-12" data-aos="fade-left">
+                    <div class="absolute top-0 w-full h-6 bg-black z-20 rounded-b-2xl"></div>
+                    <img src="https://www.google.com/" alt="Filter in action" class="w-full h-full object-cover">
+                    <!-- UI Overlay Fake -->
+                    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full border-4 border-white bg-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: CTA -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-primary/10 blur-[100px]"></div>
+        <div class="max-w-3xl mx-auto px-4 text-center relative z-10" data-aos="zoom-in">
+            <h2 class="text-4xl font-bold font-display mb-6">See something you like?</h2>
+            <p class="text-slate-400 mb-10 text-lg">We can build custom variations of these mechanics tailored specifically to your brand identity.</p>
+            <a href="contact.html" class="px-10 py-4 bg-white text-dark font-bold rounded-full hover:bg-slate-200 transition-colors inline-block text-lg">
+                Get a Quote
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Spotlight Feature -->
+    <section class="py-24 bg-dark relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl font-bold font-display mb-12 text-center" data-aos="fade-up">Filter <span class="text-gradient">Spotlight</span></h2>
+            <div class="glass p-8 md:p-12 rounded-[3rem] flex flex-col md:flex-row items-center gap-12" data-aos="zoom-in">
+                <div class="md:w-1/2">
+                    <img src="images/neon_cyberpunk.png" alt="Spotlight Project" class="rounded-3xl w-full shadow-2xl border border-white/10 object-cover aspect-[4/3]">
+                </div>
+                <div class="md:w-1/2">
+                    <span class="text-primary font-bold tracking-wide uppercase text-sm mb-2 block">Campaign of the Year</span>
+                    <h3 class="text-4xl font-bold font-display mb-6 text-white">Galactic Goddess</h3>
+                    <p class="text-slate-400 mb-6 text-lg">A fully immersive 3D helmet tracking filter built for a major sci-fi movie release. We utilized Lens Studio's latest reflection probes to make the visor actually reflect the user's real-world environment in real-time.</p>
+                    <div class="flex gap-8 mb-8 border-y border-white/10 py-6">
+                        <div>
+                            <p class="text-3xl font-bold text-white">45M+</p>
+                            <p class="text-sm text-slate-500">Global Views</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-white">2.2M</p>
+                            <p class="text-sm text-slate-500">Saves/Shares</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="inline-block px-8 py-3 bg-white text-dark font-bold rounded-full hover:bg-slate-200 transition-colors">Build Something Similar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: Client Roster -->
+    <section class="py-24 bg-surface border-y border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold font-display">Brands We've <span class="text-gradient">Elevated</span></h2>
+        </div>
+        <!-- Infinite Marquee -->
+        <div class="relative w-full flex overflow-x-hidden group">
+            <div class="animate-marquee flex whitespace-nowrap opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="text-4xl font-display font-bold mx-12">NETFLIX</span>
+                <span class="text-4xl font-display font-bold mx-12">ADIDAS</span>
+                <span class="text-4xl font-display font-bold mx-12">LVMH</span>
+                <span class="text-4xl font-display font-bold mx-12">SPOTIFY</span>
+                <span class="text-4xl font-display font-bold mx-12">RED BULL</span>
+                <span class="text-4xl font-display font-bold mx-12">GUCCI</span>
+            </div>
+            <div class="absolute top-0 animate-marquee2 flex whitespace-nowrap opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="text-4xl font-display font-bold mx-12">NETFLIX</span>
+                <span class="text-4xl font-display font-bold mx-12">ADIDAS</span>
+                <span class="text-4xl font-display font-bold mx-12">LVMH</span>
+                <span class="text-4xl font-display font-bold mx-12">SPOTIFY</span>
+                <span class="text-4xl font-display font-bold mx-12">RED BULL</span>
+                <span class="text-4xl font-display font-bold mx-12">GUCCI</span>
+            </div>
+        </div>
+        <style>
+            .animate-marquee { animation: marquee 25s linear infinite; }
+            .animate-marquee2 { animation: marquee2 25s linear infinite; }
+            @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } }
+            @keyframes marquee2 { 0% { transform: translateX(100%); } 100% { transform: translateX(0%); } }
+        </style>
+    </section>
+
+    <!-- SECTION 7: UGC (User Generated Content) -->
+    <section class="py-24 relative bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold font-display mb-4">In The <span class="text-gradient">Wild</span></h2>
+                <p class="text-slate-400">Real users engaging with our creations across the globe.</p>
+            </div>
+            
+            <div class="columns-2 md:columns-4 gap-4 space-y-4">
+                <div class="break-inside-avoid rounded-2xl overflow-hidden glass hover:scale-105 transition-transform" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/nike_campaign.png" alt="UGC" class="w-full">
+                </div>
+                <div class="break-inside-avoid rounded-2xl overflow-hidden glass hover:scale-105 transition-transform" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/beauty_campaign.png" alt="UGC" class="w-full">
+                </div>
+                <div class="break-inside-avoid rounded-2xl overflow-hidden glass hover:scale-105 transition-transform" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/ethereal_beauty.png" alt="UGC" class="w-full">
+                </div>
+                <div class="break-inside-avoid rounded-2xl overflow-hidden glass hover:scale-105 transition-transform" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/product_try_on.png" alt="UGC" class="w-full">
+                </div>
+                <div class="break-inside-avoid rounded-2xl overflow-hidden glass hover:scale-105 transition-transform" data-aos="fade-up" data-aos-delay="500">
+                    <img src="images/vr_headset.png" alt="UGC" class="w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-8 text-center text-slate-500 border-t border-white/10">
+        <p>© 2026 AR Vision. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
