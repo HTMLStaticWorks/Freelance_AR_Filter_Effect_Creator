@@ -47,7 +47,7 @@
                 <div class="hidden xl:flex space-x-8 items-center">
                     <a href="index.html" class="nav-link text-muted hover:text-strong font-medium">Home</a>
                     <a href="home2.html" class="nav-link text-strong font-medium">Home 2</a>
-                    <a href="home2.html" class="nav-link text-strong font-medium">Brands</a>
+                    <a href="brands.html" class="nav-link text-strong font-medium">Brands</a>
                     <a href="about.html" class="nav-link text-muted hover:text-strong font-medium">About</a>
                     <a href="service.html" class="nav-link text-muted hover:text-strong font-medium">Services</a>
                     <a href="portfolio.html" class="nav-link text-muted hover:text-strong font-medium">Portfolio</a>
@@ -59,9 +59,8 @@
                         <svg id="theme-icon-sun" class="w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                         <span class="text-[10px] uppercase font-bold tracking-wider text-strong opacity-80 group-hover:opacity-100">Theme</span>
                     </button>
-                    <button id="rtl-toggle-desktop" class="flex items-center gap-2 bg-surface border border-divider hover:border-primary/50 text-muted hover:text-main focus:outline-none px-3 py-1.5 rounded-full transition-all group shadow-sm" title="Toggle RTL">
-                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-strong opacity-80 group-hover:opacity-100">AR</span>
+                    <button id="rtl-toggle-desktop" class="text-muted hover:text-strong font-bold uppercase tracking-wider text-xs focus:outline-none transition-colors px-2" title="Toggle RTL">
+                        RTL
                     </button>
 </div>
                 <!-- Mobile Menu Button -->
@@ -82,7 +81,7 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
                 <a href="index.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Home</a>
                 <a href="home2.html" class="text-strong block px-3 py-2 rounded-md text-base font-medium">Home 2</a>
-                <a href="home2.html" class="text-strong block px-3 py-2 rounded-md text-base font-medium">Brands</a>
+                <a href="brands.html" class="text-strong block px-3 py-2 rounded-md text-base font-medium">Brands</a>
                 <a href="about.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">About</a>
                 <a href="service.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Services</a>
                 <a href="portfolio.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
@@ -95,192 +94,246 @@
                         <svg id="theme-icon-sun" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                         <span class="text-xs font-bold uppercase tracking-wider text-strong">Theme</span>
                     </button>
-                    <button id="rtl-toggle-mobile" class="text-muted hover:text-main focus:outline-none p-2 border border-divider rounded-md flex-1 flex justify-center items-center gap-2 transition-colors">
-                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
-                        <span class="text-xs font-bold uppercase tracking-wider text-strong">AR</span>
+                    <button id="rtl-toggle-mobile" class="text-muted hover:text-strong font-bold uppercase tracking-wider text-xs focus:outline-none p-2 transition-colors flex-1 text-center border border-divider rounded-md">
+                        RTL
                     </button>
                 </div>
 </div>
         </div>
     </nav>
 
-    <!-- SECTION 1: Brand Hero -->
-    <section class="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-[url('images/product_try_on.png')] bg-cover bg-center">
-        <div class="absolute inset-0 bg-bg opacity-90 backdrop-blur-sm z-0"></div>
+        <!-- SECTION 1: Spatial Computing Hero -->
+    <section class="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-bg">
+        <!-- Dynamic Background -->
+        <div class="absolute inset-0 bg-[url('images/neon_cyberpunk.png')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-bg/50 to-bg z-0"></div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="fade-up">
-            <span class="px-4 py-2 rounded-full glass text-primary font-semibold text-sm mb-6 inline-block uppercase tracking-wider">For Brands & Agencies</span>
-            <h1 class="text-4xl md:text-8xl font-extrabold font-display leading-tight mb-6">
-                Turn Viewers Into <br><span class="text-gradient">Participants</span>
-            </h1>
-            <p class="text-xl text-muted max-w-2xl mx-auto mb-10">We engineer viral AR campaigns that transform passive scrolling into active brand engagement.</p>
-            <div class="flex justify-center gap-4">
-                <a href="#case-studies" class="px-8 py-4 bg-strong text-bg font-bold rounded-full hover:bg-primary hover:text-white transition-colors">See Case Studies</a>
+        <!-- Glowing Orbs -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/30 rounded-full blur-[120px] animate-pulse pointer-events-none" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <span class="px-4 py-2 rounded-full glass border border-primary/50 text-primary font-bold text-xs mb-6 inline-block uppercase tracking-widest shadow-[0_0_15px_rgba(139,92,246,0.5)]">
+                        Spatial Computing Studio
+                    </span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold font-display leading-tight mb-6 text-strong">
+                        Enter the <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary animate-gradient-x">Metaverse</span>
+                    </h1>
+                    <p class="text-xl text-muted mb-10 max-w-lg">Pushing the boundaries of reality with immersive web AR, spatial UI, and next-gen 3D filters.</p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="portfolio.html" class="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-full hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] transition-all duration-300 transform hover:-translate-y-1">
+                            Explore Dimensions
+                        </a>
+                        <a href="service.html" class="px-8 py-4 glass border border-divider text-strong font-bold rounded-full hover:bg-surface transition-all duration-300">
+                            Our Capabilities
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative" data-aos="fade-left" data-aos-delay="200">
+                    <!-- 3D Element Container -->
+                    <div class="relative w-full aspect-square rounded-full flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full animate-spin-slow opacity-20 blur-3xl pointer-events-none"></div>
+                        <img src="images/vr_headset.png" alt="VR Headset" class="relative z-10 w-3/4 object-contain animate-float drop-shadow-[0_20px_50px_rgba(139,92,246,0.5)]">
+                        
+                        <!-- Floating Badges -->
+                        <div class="absolute top-10 right-10 glass px-6 py-3 rounded-2xl border border-divider animate-float shadow-xl" style="animation-delay: 1s;">
+                            <p class="text-xs text-muted font-bold">Performance</p>
+                            <p class="text-lg text-primary font-bold">120 FPS</p>
+                        </div>
+                        <div class="absolute bottom-10 left-10 glass px-6 py-3 rounded-2xl border border-divider animate-float shadow-xl" style="animation-delay: 2.5s;">
+                            <p class="text-xs text-muted font-bold">Platform</p>
+                            <p class="text-lg text-secondary font-bold">VisionOS Ready</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2: Brand Partners -->
-    <section class="py-16 bg-surface border-y border-divider">
+    <!-- SECTION 2: Core Technologies (Masonry Style) -->
+    <section id="services" class="py-24 bg-surface border-y border-divider relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-muted font-semibold mb-8 tracking-widest uppercase text-sm">Trusted by Global Innovators</p>
-            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                <!-- Placeholder Logos using Text/Icons -->
-                <img src="images/logo_vogue.svg" alt="Vogue" class="h-10 invert dark:invert-0">
-                <img src="images/logo_nike.svg" alt="Nike" class="h-10 invert dark:invert-0">
-                <img src="images/logo_loreal.svg" alt="L'Oréal" class="h-10 invert dark:invert-0">
-                <img src="images/logo_samsung.svg" alt="Samsung" class="h-10 invert dark:invert-0">
-                <img src="images/logo_sony.svg" alt="Sony" class="h-10 invert dark:invert-0">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold font-display mb-4">Mastering <span class="text-gradient">Realities</span></h2>
+                <p class="text-muted max-w-2xl mx-auto">We build across the entire spatial computing spectrum.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: Case Studies -->
-    <section id="case-studies" class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold font-display mb-16 text-center" data-aos="fade-up">Featured <span class="text-gradient">Campaigns</span></h2>
             
-            <div class="space-y-24">
-                <!-- Case Study 1 -->
-                <div class="flex flex-col md:flex-row items-center gap-12" data-aos="fade-right">
-                    <div class="md:w-1/2">
-                        <img src="images/nike_campaign.png" alt="Nike Campaign" class="rounded-3xl shadow-2xl animate-float">
-                    </div>
-                    <div class="md:w-1/2">
-                        <h3 class="text-3xl font-bold font-display mb-4">Virtual Sneaker Drop</h3>
-                        <p class="text-muted mb-6">We partnered with a major streetwear brand to launch an exclusive virtual try-on experience. Users could "wear" the unreleased sneakers and unlock a secret pre-order link.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> 2.5M Unique Impressions</li>
-                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> 18% Conversion Rate</li>
-                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> Sold out in 4 hours</li>
-                        </ul>
-                        <a href="contact.html" class="text-secondary font-bold hover:text-strong transition-colors">Request Full Report &rarr;</a>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tech 1 -->
+                <div class="glass p-8 rounded-3xl border border-divider hover:border-primary/50 transition-colors group md:col-span-2 md:row-span-2 flex flex-col justify-end min-h-[400px] relative overflow-hidden" data-aos="zoom-in">
+                    <div class="absolute inset-0 bg-[url('images/sketches.png')] bg-cover bg-center opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/80 to-transparent pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-bold font-display mb-3">Custom Shaders & VFX</h3>
+                        <p class="text-muted mb-4 max-w-md">Push mobile GPUs to their limits with hyper-optimized custom GLSL shaders that run flawlessly on Instagram and TikTok.</p>
+                        <a href="service.html" class="text-primary font-bold group-hover:translate-x-2 inline-flex items-center transition-transform duration-300">Discover More <span class="ml-2">&rarr;</span></a>
                     </div>
                 </div>
-
-                <!-- Case Study 2 -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-12" data-aos="fade-left">
-                    <div class="md:w-1/2">
-                        <img src="images/beauty_campaign.png" alt="Beauty Campaign" class="rounded-3xl shadow-2xl animate-float-delayed">
+                
+                <!-- Tech 2 -->
+                <div class="glass p-8 rounded-3xl border border-divider hover:border-secondary/50 transition-colors group relative overflow-hidden" data-aos="fade-left" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
+                        <svg class="w-24 h-24 text-secondary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                     </div>
-                    <div class="md:w-1/2">
-                        <h3 class="text-3xl font-bold font-display mb-4">Interactive Beauty Masterclass</h3>
-                        <p class="text-muted mb-6">A multi-stage Instagram filter that guided users through a 3-step makeup routine using a beauty brand's new fall collection, using real-time face mesh mapping.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> 45s Average Dwell Time</li>
-                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> 500K+ User Shares</li>
-                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> Webby Award Nominee</li>
-                        </ul>
-                        <a href="contact.html" class="text-primary font-bold hover:text-strong transition-colors">Request Full Report &rarr;</a>
+                    <h3 class="text-2xl font-bold font-display mb-2 relative z-10">3D Optimization</h3>
+                    <p class="text-sm text-muted relative z-10">Low-poly modeling that looks high-end.</p>
+                </div>
+                
+                <!-- Tech 3 -->
+                <div class="glass p-8 rounded-3xl border border-divider hover:border-primary/50 transition-colors group relative overflow-hidden" data-aos="fade-left" data-aos-delay="200">
+                    <div class="absolute bottom-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
+                        <svg class="w-24 h-24 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16z"/></svg>
                     </div>
+                    <h3 class="text-2xl font-bold font-display mb-2 relative z-10">Face Tracking</h3>
+                    <p class="text-sm text-muted relative z-10">Micro-expression detection and morphing.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- SECTION 4: CTA -->
-    <section class="py-24 bg-surface border-t border-divider text-center">
-        <div class="max-w-3xl mx-auto px-4" data-aos="zoom-in">
-            <h2 class="text-4xl font-bold font-display mb-6">Let's discuss your next <span class="text-gradient">Activation</span></h2>
-            <p class="text-muted mb-10">We work closely with agencies and brand managers to deliver flawless AR assets on time and on budget.</p>
-            <a href="signup.html" class="px-8 py-4 glass text-strong font-bold rounded-full hover:bg-strong hover:text-bg transition-colors border border-primary text-center inline-flex items-center gap-2">
-                Book a Consultation
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-            </a>
-        </div>
-    </section>
-
-    <!-- SECTION 5: Platform Breakdown -->
-    <section class="py-24 bg-surface border-t border-divider relative overflow-hidden">
+    <!-- SECTION 3: Featured Dimensions (Portfolio) -->
+    <section class="py-24 bg-dark relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('images/code_screen.png')] bg-cover bg-center opacity-10 mix-blend-screen"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-bg"></div>
+        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 class="text-4xl font-bold font-display mb-16 text-center" data-aos="fade-up">Choose Your <span class="text-gradient">Platform</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-3xl text-center flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-2xl font-bold font-display mb-2 text-strong">Instagram</h3>
-                    <p class="text-muted text-sm mb-6">Best for viral beauty trends, brand awareness, and influencer amplification.</p>
-                    <div class="h-1 w-full bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 rounded-full mb-6 mt-auto"></div>
-                    <ul class="text-sm text-muted space-y-2 text-left">
-                        <li>&check; Massive organic reach</li>
-                        <li>&check; High shareability in Stories</li>
-                        <li>&check; Seamless e-commerce linking</li>
-                    </ul>
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold font-display mb-4 text-white">Featured <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Dimensions</span></h2>
+                    <p class="text-gray-400 max-w-xl">Explore our most successful immersive campaigns.</p>
                 </div>
-                <div class="glass p-8 rounded-3xl text-center flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-2xl font-bold font-display mb-2 text-strong">Snapchat</h3>
-                    <p class="text-muted text-sm mb-6">Best for Gen-Z targeting, complex 3D world tracking, and gamification.</p>
-                    <div class="h-1 w-full bg-[#FFFC00] rounded-full mb-6 mt-auto"></div>
-                    <ul class="text-sm text-muted space-y-2 text-left">
-                        <li>&check; Advanced body tracking</li>
-                        <li>&check; Highest average dwell time</li>
-                        <li>&check; Interactive Sponsored Lenses</li>
-                    </ul>
+                <a href="portfolio.html" class="mt-6 md:mt-0 px-6 py-3 border border-white/20 text-white rounded-full hover:bg-white/10 transition-colors inline-flex items-center gap-2">
+                    View Archive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative rounded-3xl overflow-hidden glass border border-white/10 aspect-[4/5] flex flex-col justify-end p-8" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/ethereal_beauty.png" alt="Project 1" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="text-primary font-bold text-xs uppercase tracking-wider mb-2 block">Beauty & Fashion</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">Ethereal Glow</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 h-0 group-hover:h-auto overflow-hidden mb-4">A high-fidelity beauty filter featuring particle physics and real-time lighting adjustments.</p>
+                        <div class="flex gap-4">
+                            <span class="glass px-3 py-1 rounded-full text-xs font-bold text-white">12M Views</span>
+                            <span class="glass px-3 py-1 rounded-full text-xs font-bold text-white">1.2M Shares</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="glass p-8 rounded-3xl text-center flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-2xl font-bold font-display mb-2 text-strong">TikTok</h3>
-                    <p class="text-muted text-sm mb-6">Best for sound-reactive effects, hashtag challenges, and rapid virality.</p>
-                    <div class="h-1 w-full bg-strong text-bg rounded-full mb-6 mt-auto"></div>
-                    <ul class="text-sm text-muted space-y-2 text-left">
-                        <li>&check; Audio-synced animations</li>
-                        <li>&check; Algorithm-friendly engagement</li>
-                        <li>&check; Perfect for dance challenges</li>
-                    </ul>
+
+                <!-- Project 2 -->
+                <div class="group relative rounded-3xl overflow-hidden glass border border-white/10 aspect-[4/5] flex flex-col justify-end p-8 lg:translate-y-12" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/nike_campaign.png" alt="Project 2" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="text-secondary font-bold text-xs uppercase tracking-wider mb-2 block">Product Launch</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">Air Max React</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 h-0 group-hover:h-auto overflow-hidden mb-4">Interactive foot tracking allowing users to virtually try on the latest streetwear drops.</p>
+                        <div class="flex gap-4">
+                            <span class="glass px-3 py-1 rounded-full text-xs font-bold text-white">8.5M Views</span>
+                            <span class="glass px-3 py-1 rounded-full text-xs font-bold text-white">4.5% CTR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative rounded-3xl overflow-hidden glass border border-white/10 aspect-[4/5] flex flex-col justify-end p-8" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/vr_headset.png" alt="Project 3" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="text-primary font-bold text-xs uppercase tracking-wider mb-2 block">Spatial UI</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">VisionOS Concept</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 h-0 group-hover:h-auto overflow-hidden mb-4">A futuristic interface designed for the next generation of mixed reality headsets.</p>
+                        <div class="flex gap-4">
+                            <span class="glass px-3 py-1 rounded-full text-xs font-bold text-white">FWA Award</span>
+                            <span class="glass px-3 py-1 rounded-full text-xs font-bold text-white">Concept</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 6: Performance Metrics -->
-    <section class="py-24 relative overflow-hidden bg-bg">
-        <div class="absolute inset-0 bg-primary/5"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h2 class="text-4xl font-bold font-display mb-16" data-aos="fade-up">The AR <span class="text-gradient">Advantage</span></h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div data-aos="zoom-in" data-aos-delay="100">
-                    <div class="text-4xl md:text-6xl font-bold font-display text-strong mb-2">4x</div>
-                    <p class="text-muted text-sm uppercase tracking-wide">Higher conversion rate than standard video ads</p>
+    <!-- SECTION 4: The Spatial Advantage (Metrics) -->
+    <section class="py-24 bg-surface border-y border-divider relative overflow-hidden">
+        <div class="absolute left-0 top-1/2 -translate-y-1/2 w-1/3 h-full bg-gradient-to-r from-primary/10 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl md:text-5xl font-bold font-display mb-6">The Spatial <span class="text-gradient">Advantage</span></h2>
+                    <p class="text-muted text-lg mb-8">Traditional media is passive. AR is active. By inviting your audience to interact with your brand in 3D space, we unlock unprecedented engagement metrics.</p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Hyper-Engagement</h4>
+                                <p class="text-muted">Users spend an average of 75 seconds interacting with our custom filters.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Organic Virality</h4>
+                                <p class="text-muted">Built-in sharing mechanics turn your audience into active brand ambassadors.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div data-aos="zoom-in" data-aos-delay="200">
-                    <div class="text-4xl md:text-6xl font-bold font-display text-primary mb-2">85s</div>
-                    <p class="text-muted text-sm uppercase tracking-wide">Average dwell time inside interactive AR filters</p>
-                </div>
-                <div data-aos="zoom-in" data-aos-delay="300">
-                    <div class="text-4xl md:text-6xl font-bold font-display text-secondary mb-2">70%</div>
-                    <p class="text-muted text-sm uppercase tracking-wide">Increase in memory recall compared to 2D media</p>
-                </div>
-                <div data-aos="zoom-in" data-aos-delay="400">
-                    <div class="text-4xl md:text-6xl font-bold font-display text-strong mb-2">2.5B</div>
-                    <p class="text-muted text-sm uppercase tracking-wide">Total organic impressions generated for clients</p>
+
+                <div class="grid grid-cols-2 gap-6" data-aos="fade-left">
+                    <div class="glass p-8 rounded-3xl border border-primary/30 text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <p class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary mb-2">3.5x</p>
+                        <p class="text-muted font-bold uppercase tracking-wider text-sm">Higher Engagement</p>
+                    </div>
+                    <div class="glass p-8 rounded-3xl border border-divider text-center transform translate-y-8 hover:-translate-y-2 transition-transform duration-300">
+                        <p class="text-5xl font-black text-strong mb-2">250M+</p>
+                        <p class="text-muted font-bold uppercase tracking-wider text-sm">Total Impressions</p>
+                    </div>
+                    <div class="glass p-8 rounded-3xl border border-divider text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <p class="text-5xl font-black text-strong mb-2">45%</p>
+                        <p class="text-muted font-bold uppercase tracking-wider text-sm">Conversion Lift</p>
+                    </div>
+                    <div class="glass p-8 rounded-3xl border border-secondary/30 text-center transform translate-y-8 hover:-translate-y-2 transition-transform duration-300">
+                        <p class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-secondary to-primary mb-2">12+</p>
+                        <p class="text-muted font-bold uppercase tracking-wider text-sm">Industry Awards</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 7: Awards & Recognition -->
-    <section class="py-24 bg-surface border-y border-divider">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold font-display mb-12" data-aos="fade-up">Industry Recognition</h2>
-            <div class="flex flex-wrap justify-center items-center gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-                <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-strong text-bg rounded-full flex items-center justify-center mb-4"><img src="images/award_webby.svg" alt="Webby" class="w-full h-full theme-invert"></div>
-                    <p class="text-sm font-semibold">Webby Nominee 2024</p>
-                </div>
-                <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-strong text-bg rounded-full flex items-center justify-center mb-4"><img src="images/award_fwa.svg" alt="FWA" class="w-full h-full theme-invert"></div>
-                    <p class="text-sm font-semibold">FWA of the Day</p>
-                </div>
-                <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-strong text-bg rounded-full flex items-center justify-center mb-4"><img src="images/award_snap.svg" alt="Snap Partner" class="w-full h-full theme-invert"></div>
-                    <p class="text-sm font-semibold">Official Snap Partner</p>
-                </div>
-                <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16 bg-strong text-bg rounded-full flex items-center justify-center mb-4"><img src="images/award_meta.svg" alt="Meta" class="w-full h-full theme-invert"></div>
-                    <p class="text-sm font-semibold">Spark AR Network</p>
-                </div>
+    <!-- SECTION 5: Immersive CTA -->
+    <section class="py-32 relative overflow-hidden bg-bg">
+        <!-- Glowing gradient core -->
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-[800px] h-[400px] bg-gradient-to-r from-primary via-secondary to-primary rounded-full blur-[100px] opacity-20 animate-pulse"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center glass p-12 md:p-20 rounded-full border border-divider">
+            <h2 class="text-5xl md:text-6xl font-black font-display mb-6">Ready to <span class="text-gradient">Innovate?</span></h2>
+            <p class="text-xl text-muted mb-10 max-w-2xl mx-auto">Let's build a spatial experience that shatters engagement records and puts your brand in the metaverse.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="signup.html" class="px-10 py-5 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-full hover:shadow-[0_0_40px_rgba(139,92,246,0.6)] transition-all duration-300 transform hover:-translate-y-2 text-lg">
+                    Launch a Project
+                </a>
+                <a href="contact.html" class="px-10 py-5 bg-surface border border-divider text-strong font-bold rounded-full hover:bg-bg transition-colors text-lg">
+                    Contact Studio
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer snippet... -->
+<!-- Footer snippet... -->
         <footer class="bg-surface border-t border-divider pt-16 pb-8 relative z-10 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">

@@ -47,7 +47,7 @@
                 <div class="hidden xl:flex space-x-8 items-center">
                     <a href="index.html" class="nav-link text-muted hover:text-strong font-medium">Home</a>
                     <a href="home2.html" class="nav-link text-muted hover:text-strong font-medium">Home 2</a>
-                    <a href="home2.html" class="nav-link text-muted hover:text-strong font-medium">Brands</a>
+                    <a href="brands.html" class="nav-link text-muted hover:text-strong font-medium">Brands</a>
                     <a href="about.html" class="nav-link text-strong font-medium">About</a>
                     <a href="service.html" class="nav-link text-muted hover:text-strong font-medium">Services</a>
                     <a href="portfolio.html" class="nav-link text-muted hover:text-strong font-medium">Portfolio</a>
@@ -59,9 +59,8 @@
                         <svg id="theme-icon-sun" class="w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                         <span class="text-[10px] uppercase font-bold tracking-wider text-strong opacity-80 group-hover:opacity-100">Theme</span>
                     </button>
-                    <button id="rtl-toggle-desktop" class="flex items-center gap-2 bg-surface border border-divider hover:border-primary/50 text-muted hover:text-main focus:outline-none px-3 py-1.5 rounded-full transition-all group shadow-sm" title="Toggle RTL">
-                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-strong opacity-80 group-hover:opacity-100">AR</span>
+                    <button id="rtl-toggle-desktop" class="text-muted hover:text-strong font-bold uppercase tracking-wider text-xs focus:outline-none transition-colors px-2" title="Toggle RTL">
+                        RTL
                     </button>
 </div>
                 <!-- Mobile Menu Button -->
@@ -82,7 +81,7 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
                 <a href="index.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Home</a>
                 <a href="home2.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Home 2</a>
-                <a href="home2.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Brands</a>
+                <a href="brands.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Brands</a>
                 <a href="about.html" class="text-strong block px-3 py-2 rounded-md text-base font-medium">About</a>
                 <a href="service.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Services</a>
                 <a href="portfolio.html" class="text-muted hover:text-strong block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
@@ -95,9 +94,8 @@
                         <svg id="theme-icon-sun" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                         <span class="text-xs font-bold uppercase tracking-wider text-strong">Theme</span>
                     </button>
-                    <button id="rtl-toggle-mobile" class="text-muted hover:text-main focus:outline-none p-2 border border-divider rounded-md flex-1 flex justify-center items-center gap-2 transition-colors">
-                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
-                        <span class="text-xs font-bold uppercase tracking-wider text-strong">AR</span>
+                    <button id="rtl-toggle-mobile" class="text-muted hover:text-strong font-bold uppercase tracking-wider text-xs focus:outline-none p-2 transition-colors flex-1 text-center border border-divider rounded-md">
+                        RTL
                     </button>
                 </div>
 </div>
@@ -137,12 +135,20 @@
 
     <!-- SECTION 2: The Story -->
     <section id="story" class="py-24 bg-surface">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold font-display mb-8" data-aos="fade-up">My <span class="text-gradient">Journey</span></h2>
-            <div class="space-y-8 text-muted text-lg leading-relaxed text-left" data-aos="fade-up" data-aos-delay="100">
-                <p>It started as an experiment. In 2019, I opened Spark AR for the first time just to see if I could put a 3D model of my cat on my head. That weekend project spiraled into an obsession with spatial computing, shaders, and real-time rendering.</p>
-                <p>Since then, my independent filters have amassed over <strong class="text-strong">2.5 Billion impressions</strong> organically. This traction led me to collaborate with agencies and brands worldwide, helping them translate their physical products into digital assets.</p>
-                <p>My philosophy is simple: AR shouldn't just be a gimmick. It needs to be visually stunning, performant on old devices, and intuitively interactive.</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold font-display mb-8">My <span class="text-gradient">Journey</span></h2>
+                    <div class="space-y-6 text-muted text-lg leading-relaxed">
+                        <p>It started as an experiment. In 2019, I opened Spark AR for the first time just to see if I could put a 3D model of my cat on my head. That weekend project spiraled into an obsession with spatial computing, shaders, and real-time rendering.</p>
+                        <p>Since then, my independent filters have amassed over <strong class="text-strong">2.5 Billion impressions</strong> organically. This traction led me to collaborate with agencies and brands worldwide, helping them translate their physical products into digital assets.</p>
+                        <p>My philosophy is simple: AR shouldn't just be a gimmick. It needs to be visually stunning, performant on old devices, and intuitively interactive.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="200" class="relative">
+                    <div class="absolute inset-0 bg-primary/10 rounded-[3rem] rotate-3 transform"></div>
+                    <img src="images/studio_setup.png" alt="My Studio Setup" class="relative rounded-[3rem] border border-divider shadow-2xl object-cover w-full h-[500px]">
+                </div>
             </div>
         </div>
     </section>
@@ -178,7 +184,7 @@
                 <!-- Tool 3 -->
                 <div class="glass p-8 rounded-2xl text-center hover:bg-strong hover:text-bg transition-colors group" data-aos="zoom-in" data-aos-delay="300">
                     <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center text-strong opacity-70 group-hover:text-bg transition-colors">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender" class="w-12 h-12 object-contain group-hover:brightness-0 group-hover:invert transition-all">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender" class="w-12 h-12 object-contain group-hover:brightness-0 group-hover:invert dark:group-hover:invert-0 transition-all">
                     </div>
                     <h3 class="font-bold text-strong mb-2 group-hover:text-bg transition-colors">Blender 3D</h3>
                     <p class="text-xs text-muted group-hover:text-bg/85 transition-colors">Modeling & Animation</p>
