@@ -57,6 +57,11 @@ h1, h2, h3, h4, h5, h6, .font-display {
   background-clip: text;
 }
 
+/* Theme Invert Utility */
+body:not(.light-theme) .theme-invert {
+  filter: invert(1);
+}
+
 /* Custom Animations */
 @keyframes float {
   0% { transform: translateY(0px); }
