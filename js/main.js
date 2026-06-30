@@ -63,24 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const rtlDesktop = document.getElementById('rtl-toggle-desktop');
     const rtlMobile = document.getElementById('rtl-toggle-mobile');
     
-    function updateRTLText(isRTL) {
-        const text = isRTL ? 'EN' : 'AR';
-        if (rtlDesktop) rtlDesktop.innerHTML = `<span class="text-sm font-bold">${text}</span>`;
-        if (rtlMobile) rtlMobile.innerHTML = `<span class="text-sm font-bold">${text}</span>`;
-    }
-
     function toggleRTL() {
         const isRTL = document.documentElement.dir === 'rtl';
         document.documentElement.dir = isRTL ? 'ltr' : 'rtl';
         localStorage.setItem('rtl', document.documentElement.dir);
-        updateRTLText(!isRTL);
     }
     
     if (rtlDesktop) rtlDesktop.addEventListener('click', toggleRTL);
     if (rtlMobile) rtlMobile.addEventListener('click', toggleRTL);
-    
-    // Set initial text
-    updateRTLText(savedRTL === 'rtl');
 
     // Scroll to Top Button
     const scrollTopBtn = document.createElement('button');
